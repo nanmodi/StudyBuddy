@@ -8,12 +8,14 @@ import {
 import { usePrivy } from "@privy-io/react-auth";
 import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const { authenticated } = usePrivy();
 
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route
           path="/"
