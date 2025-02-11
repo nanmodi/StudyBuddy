@@ -14,16 +14,31 @@ body {
   top: 0;
   left: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-content {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  gap: 1rem;
 }
 
-.spacer {
-  flex: 1;
+.chatbot-button {
+  background-color: #4caf50;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  border: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.chatbot-button:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
 }
 
 .logout-button {

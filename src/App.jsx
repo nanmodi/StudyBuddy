@@ -8,6 +8,7 @@ import {
 import { usePrivy } from "@privy-io/react-auth";
 import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
+import Chatbot from "./pages/Chatbot";
 import Navbar from "./components/Navbar";
 
 const App = () => {
@@ -24,6 +25,10 @@ const App = () => {
         <Route
           path="/landing"
           element={authenticated ? <LandingPage /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/chatbot"
+          element={authenticated ? <Chatbot /> : <Navigate to="/" />}
         />
       </Routes>
     </Router>
