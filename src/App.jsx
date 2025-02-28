@@ -8,8 +8,9 @@ import {
 import { usePrivy } from "@privy-io/react-auth";
 import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
-import Chatbot from "./pages/Chatbot";
 import Navbar from "./components/Navbar";
+import UploadDocuments from "./pages/UploadDocuments";
+import FileView from "./pages/FileView";
 
 const App = () => {
   const { authenticated } = usePrivy();
@@ -27,8 +28,12 @@ const App = () => {
           element={authenticated ? <LandingPage /> : <Navigate to="/" />}
         />
         <Route
-          path="/chatbot"
-          element={authenticated ? <Chatbot /> : <Navigate to="/" />}
+          path="/upload-documents"
+          element={authenticated ? <UploadDocuments /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/file/:id"
+          element={authenticated ? <FileView /> : <Navigate to="/" />}
         />
       </Routes>
     </Router>

@@ -9,7 +9,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-content">
-        <button className="chatbot-button">Try StudyBot!</button>
         <button onClick={logout} className="logout-button">
           Log Out
         </button>
